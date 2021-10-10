@@ -50,7 +50,9 @@
                 <argument name="websiteName" value="{{customWebsite.name}}"/>
             </actionGroup>
             <actionGroup ref="AdminClearFiltersActionGroup" stepKey="clearFilters"/>
-            <comment userInput="Adding the comment to replace CliIndexerReindexActionGroup action group ('indexer:reindex' commands) for preserving Backward Compatibility" stepKey="reindex"/>
+            <actionGroup ref="CliIndexerReindexActionGroup" stepKey="reindex">
+                <argument name="indices" value=""/>
+            </actionGroup>
             <actionGroup ref="CliCacheFlushActionGroup" stepKey="flushCache">
                 <argument name="tags" value=""/>
             </actionGroup>
